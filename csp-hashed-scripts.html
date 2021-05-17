@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="script-src 'sha256-1OvoPTM3RbAclxZfP8/XGvyyKn6UvACDERsgPUaQqpk=' 'sha256-MCfujWnFLaS7Az0Cm5XMacMYECYism2/7Pxuak2ebLs=' 'sha256-rFi4pVjSLb9XIvUqdJNMzw1jYPEJd4F/CehR07cYnZ4=' 'strict-dynamic'"
+      content="script-src 'self' 'sha256-1OvoPTM3RbAclxZfP8/XGvyyKn6UvACDERsgPUaQqpk=' 'sha256-MCfujWnFLaS7Az0Cm5XMacMYECYism2/7Pxuak2ebLs=' 'sha256-rFi4pVjSLb9XIvUqdJNMzw1jYPEJd4F/CehR07cYnZ4=' 'strict-dynamic'"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSP hashed scripts (with errors)</title>
@@ -18,8 +18,8 @@
   </head>
   <body>
     <p>
-      Strict CSP policy, which allows to load scripts from origin and execute
-      all inline scripts with hashes
+      Strict CSP policy, which should allow to load scripts from origin and execute
+      all inline scripts with hashes, but it fails!
     </p>
     <code>
       script-src 'sha256-rFi4pVjSLb9XIvUqdJNMzw1jYPEJd4F/CehR07cYnZ4=' 'strict-dynamic'
