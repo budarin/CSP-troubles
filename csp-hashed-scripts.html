@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="script-src 'sha256-rFi4pVjSLb9XIvUqdJNMzw1jYPEJd4F/CehR07cYnZ4=' 'strict-dynamic'"
+      content="script-src 'self' 'sha256-rFi4pVjSLb9XIvUqdJNMzw1jYPEJd4F/CehR07cYnZ4=' 'strict-dynamic'"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSP hashed scripts (with errors)</title>
@@ -22,7 +22,7 @@
       all hashed inline scripts with hashes, but it fails!
     </p>
     <code>
-      script-src 'sha256-rFi4pVjSLb9XIvUqdJNMzw1jYPEJd4F/CehR07cYnZ4=' 'strict-dynamic'
+      script-src 'self' 'sha256-rFi4pVjSLb9XIvUqdJNMzw1jYPEJd4F/CehR07cYnZ4=' 'strict-dynamic'
     </code>
     <p>Tip: Open DevTools on the Console tab</p>
     <a href="index.html">Simple CSP policy page</a>
