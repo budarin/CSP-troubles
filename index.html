@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSP troubles</title>
 
@@ -18,7 +18,8 @@
       Simple CSP policy, which allows to load scripts from origin and execute
       all inline scripts
     </p>
-    <code>script-src 'self' 'unsafe-inline'</code>
+    <code>default-src 'self'; script-src 'self' 'unsafe-inline'</code>
+
     <p>Tip: Open DevTools on the Console tab</p>
     <a href="csp-hashed-scripts.html">CSP hashed scripts page</a>
   </body>
