@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="script-src 'sha256-1OvoPTM3RbAclxZfP8/XGvyyKn6UvACDERsgPUaQqpk=' 'sha256-rFi4pVjSLb9XIvUqdJNMzw1jYPEJd4F/CehR07cYnZ4=' 'strict-dynamic'"
+      content="script-src 'sha256-rFi4pVjSLb9XIvUqdJNMzw1jYPEJd4F/CehR07cYnZ4=' 'strict-dynamic'"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSP hashed scripts (with errors)</title>
@@ -12,12 +12,13 @@
     <script src="root-script.js"></script>
     <script src="folder/non-root-script.js"></script>
 
-    <script>console.log("root script is allowed");
-</script>
+    <script>console.log("Inline code without hash is alowed");</script>
 
     <script>
       console.log("inline script is allowed!");
     </script>
+
+    <script>console.log("Another inline code without hash is alowed");</script>
   </head>
   <body>
     <p>
