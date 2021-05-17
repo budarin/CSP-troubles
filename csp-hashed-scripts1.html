@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'sha256-hC+TuNgOosSyzm0UW/g66LEu21GptmgfXz+p3YvqVAk=' 'sha256-tVlCTBxKzLd7Azq/ZqI0y/rZRose3ZH8eI8QpSEWQNc=' 'sha256-rFi4pVjSLb9XIvUqdJNMzw1jYPEJd4F/CehR07cYnZ4=' 'strict-dynamic'"
+      content="default-src 'self'; script-src 'self' 'sha256-1OvoPTM3RbAclxZfP8/XGvyyKn6UvACDERsgPUaQqpk=' 'sha256-MCfujWnFLaS7Az0Cm5XMacMYECYism2/7Pxuak2ebLs=' 'sha256-rFi4pVjSLb9XIvUqdJNMzw1jYPEJd4F/CehR07cYnZ4=' 'strict-dynamic'"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSP with all script hashes (with errors)</title>
 
-    <script src="root-script.js" integrity="sha256-hC+TuNgOosSyzm0UW/g66LEu21GptmgfXz+p3YvqVAk="></script>
-    <script src="folder/non-root-script.js" integrity="sha256-tVlCTBxKzLd7Azq/ZqI0y/rZRose3ZH8eI8QpSEWQNc="></script>
+    <script src="root-script.js" integrity="sha256-1OvoPTM3RbAclxZfP8/XGvyyKn6UvACDERsgPUaQqpk="></script>
+    <script src="folder/non-root-script.js" integrity="sha256-MCfujWnFLaS7Az0Cm5XMacMYECYism2/7Pxuak2ebLs="></script>
 
     <script>
       console.log("inline script is allowed!");
