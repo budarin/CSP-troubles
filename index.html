@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' 'unsafe inline'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSP troubles</title>
+
+    <script src="/root-script.js"></script>
+    <script src="/folder/non-root-script.js"></script>
+
+    <script>
+      console.log("inline script is allowed!");
+    </script>
+  </head>
+  <body>
+    <p>
+      Simple CSP policy, which allows to load scripts from origin and execute
+      all inline scripts
+    </p>
+    <a href="/csp-hashed-scripts.html">CSP hashed scripts page</a>
+  </body>
+</html>

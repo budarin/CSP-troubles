@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' 'unsafe inline' 'sha256-1OvoPTM3RbAclxZfP8/XGvyyKn6UvACDERsgPUaQqpk=' 'sha256-MCfujWnFLaS7Az0Cm5XMacMYECYism2/7Pxuak2ebLs=' 'sha256-Rv3v0/IfGRvYeVVvp+amiyBmNfmswvekT6K+JbAutQk=' 'strict-dynamic'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSP hashed scripts (with errors)</title>
+
+    <script src="/root-script.js"></script>
+    <script src="/folder/non-root-script.js"></script>
+
+    <script>
+      console.log("inline script is allowed!");
+    </script>
+  </head>
+  <body>
+    <p>
+      Stric CSP policy, which allows to load scripts from origin and execute all
+      inline scripts with hashes
+    </p>
+    <a href="/index.html">Simple CSP policy page</a>
+  </body>
+</html>
