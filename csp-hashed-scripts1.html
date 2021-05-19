@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'sha256-wZg+x+LFtnhv9o0pDiSYIUR9gEciL1KmhPLfOAd5+w4=' 'sha256-PLP5YiLdrRFTxUnLAZ5gKOmlI6AoWKBFXkZuxAN8Qn4=' 'sha256-/wjJxMxIJ1SewtCQ+ZLGqX+4GJcK2jZA2xShryKQhfo=' 'strict-dynamic' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+      content="default-src 'self'; script-src 'self' 'sha256-wZg+x+LFtnhv9o0pDiSYIUR9gEciL1KmhPLfOAd5+w4=' 'sha256-PLP5YiLdrRFTxUnLAZ5gKOmlI6AoWKBFXkZuxAN8Qn4=' 'sha256-d/p4wxoEWLKMswgagVF75MaSl2ApQXumNG1tqVILWSU=' 'strict-dynamic' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSP with all script hashes & SRI (without errors)</title>
@@ -15,7 +15,7 @@
       all hashed inline scripts with hashes and SRI and it works (but not for FireFox - throw it out)!
     </p>
     <code>
-      default-src 'self'; script-src 'self' 'sha256-wZg+x+LFtnhv9o0pDiSYIUR9gEciL1KmhPLfOAd5+w4=' 'sha256-PLP5YiLdrRFTxUnLAZ5gKOmlI6AoWKBFXkZuxAN8Qn4=' 'sha256-/wjJxMxIJ1SewtCQ+ZLGqX+4GJcK2jZA2xShryKQhfo=' 'strict-dynamic' 'unsafe-inline';
+      default-src 'self'; script-src 'self' 'sha256-wZg+x+LFtnhv9o0pDiSYIUR9gEciL1KmhPLfOAd5+w4=' 'sha256-PLP5YiLdrRFTxUnLAZ5gKOmlI6AoWKBFXkZuxAN8Qn4=' 'sha256-d/p4wxoEWLKMswgagVF75MaSl2ApQXumNG1tqVILWSU=' 'strict-dynamic' 'unsafe-inline';
     </code>
     <p>Tip: Open DevTools on the Console tab</p>
 
