@@ -9,18 +9,6 @@
     <script src="root-script.js" integrity="sha256-1OvoPTM3RbAclxZfP8/XGvyyKn6UvACDERsgPUaQqpk="></script>
     <script src="folder/non-root-script.js" integrity="sha256-MCfujWnFLaS7Az0Cm5XMacMYECYism2/7Pxuak2ebLs="></script>
 
-    <style>
-      form {
-        width: 250px;
-      }
-      .disabled {
-        color: red;
-      }
-      .ok {
-        color: green;
-      }
-    </style>
-
   </head>
   <body>
     <p>
@@ -33,18 +21,18 @@
     <a href="csp-hashed-scripts.html">CSP hashed scripts page</a>
 
     <h2>Demo</h2>
-    <form action="#">
+    <form action="#" style="width: 250px;">
       <fieldset>
         <legend>inline script</legend>
-        <span id="inline-script" class="disabled">disabled</span>
+        <span id="inline-script" style="color: red;">disabled</span>
       </fieldset>
       <fieldset>
         <legend>/root-script.js</legend>
-        <span id="root-external-script" class="disabled">disabled</span>
+        <span id="root-external-script" style="color: red;">disabled</span>
       </fieldset>
       <fieldset>
         <legend>/folder/non-root-script.js</legend>
-        <span id="non-root-external-script" class="disabled">disabled</span>
+        <span id="non-root-external-script" style="color: red;">disabled</span>
       </fieldset>
     </form>
 
