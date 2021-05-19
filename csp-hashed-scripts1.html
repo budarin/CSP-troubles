@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'sha256-wZg+x+LFtnhv9o0pDiSYIUR9gEciL1KmhPLfOAd5+w4=' 'sha256-PLP5YiLdrRFTxUnLAZ5gKOmlI6AoWKBFXkZuxAN8Qn4=' 'sha256-aPK+M1Ic/YyssLh6WKqbat5IIKD6wwh/hyWW5D53D9k=' 'strict-dynamic' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+      content="default-src 'self'; script-src 'self' 'sha256-njl7zxiKalRhsBLsWOUobG2Oj/tPLHj1uypL4dOi1K8=' 'sha256-EeTNsJLV3kvLLMz7pxGfvh9u0JY8icKG5KjWnb8IZbQ=' 'sha256-aPK+M1Ic/YyssLh6WKqbat5IIKD6wwh/hyWW5D53D9k=' 'strict-dynamic' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSP with all script hashes & SRI (without errors)</title>
@@ -15,7 +15,7 @@
       all hashed inline scripts with hashes and SRI and it works (but not for FireFox - throw it out)!
     </p>
     <code>
-      default-src 'self'; script-src 'self' 'sha256-wZg+x+LFtnhv9o0pDiSYIUR9gEciL1KmhPLfOAd5+w4=' 'sha256-PLP5YiLdrRFTxUnLAZ5gKOmlI6AoWKBFXkZuxAN8Qn4=' 'sha256-aPK+M1Ic/YyssLh6WKqbat5IIKD6wwh/hyWW5D53D9k=' 'strict-dynamic' 'unsafe-inline';
+      default-src 'self'; script-src 'self' 'sha256-njl7zxiKalRhsBLsWOUobG2Oj/tPLHj1uypL4dOi1K8=' 'sha256-EeTNsJLV3kvLLMz7pxGfvh9u0JY8icKG5KjWnb8IZbQ=' 'sha256-aPK+M1Ic/YyssLh6WKqbat5IIKD6wwh/hyWW5D53D9k=' 'strict-dynamic' 'unsafe-inline';
     </code>
     <p>Tip: Open DevTools on the Console tab</p>
 
@@ -27,15 +27,15 @@
     <form action="#" style="width: 250px;">
       <fieldset>
         <legend>inline script</legend>
-        <span id="inline-script">disabled</span>
+        <span id="inline-script" style="color: red;">disabled</span>
       </fieldset>
       <fieldset>
         <legend>/root-script.js</legend>
-        <span id="root-external-script">disabled</span>
+        <span id="root-external-script" style="color: red;">disabled</span>
       </fieldset>
       <fieldset>
         <legend>/folder/non-root-script.js</legend>
-        <span id="non-root-external-script">disabled</span>
+        <span id="non-root-external-script" style="color: red;">disabled</span>
       </fieldset>
     </form>
 
@@ -45,7 +45,7 @@
       el.style.color = "green";
       console.log("inline script is allowed!");
     </script>
-    <script src="root-script.js" integrity="sha256-wZg+x+LFtnhv9o0pDiSYIUR9gEciL1KmhPLfOAd5+w4="></script>
-    <script src="folder/non-root-script.js" integrity="sha256-PLP5YiLdrRFTxUnLAZ5gKOmlI6AoWKBFXkZuxAN8Qn4="></script>
+    <script src="root-script.js" integrity="sha256-njl7zxiKalRhsBLsWOUobG2Oj/tPLHj1uypL4dOi1K8="></script>
+    <script src="folder/non-root-script.js" integrity="sha256-EeTNsJLV3kvLLMz7pxGfvh9u0JY8icKG5KjWnb8IZbQ="></script>
   </body>
 </html>
