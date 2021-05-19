@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'sha256-iP5Edc0Lphj4Sio65Gg1DzkqPXpsL6IlQ0XcIlVBUVs=' 'strict-dynamic' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
+      content="default-src 'self'; script-src 'self' 'sha256-iP5Edc0Lphj4Sio65Gg1DzkqPXpsL6IlQ0XcIlVBUVs=' 'strict-dynamic' 'unsafe-inline';"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSP with inline script hashes (with errors)</title>
@@ -27,22 +27,21 @@
     <form action="#" style="width: 250px;">
       <fieldset>
         <legend>inline script</legend>
-        <span id="inline-script" style="color: red;">disabled</span>
+        <span id="inline-script">disabled</span>
       </fieldset>
       <fieldset>
         <legend>/root-script.js</legend>
-        <span id="root-external-script" style="color: red;">disabled</span>
+        <span id="root-external-script">disabled</span>
       </fieldset>
       <fieldset>
         <legend>/folder/non-root-script.js</legend>
-        <span id="non-root-external-script" style="color: red;">disabled</span>
+        <span id="non-root-external-script">disabled</span>
       </fieldset>
     </form>
 
     <script>
       const el = document.getElementById("inline-script");
       el.innerText = "Ok";
-      el.style.color = "green";
       console.log("inline script is allowed!");
     </script>
     <script src="root-script.js"></script>
