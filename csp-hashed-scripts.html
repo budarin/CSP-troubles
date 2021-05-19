@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'sha256-d/p4wxoEWLKMswgagVF75MaSl2ApQXumNG1tqVILWSU=' 'strict-dynamic' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+      content="default-src 'self'; script-src 'self' 'sha256-aPK+M1Ic/YyssLh6WKqbat5IIKD6wwh/hyWW5D53D9k=' 'strict-dynamic' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSP with inline script hashes (with errors)</title>
@@ -15,7 +15,7 @@
       all hashed inline scripts with hashes, but it fails!
     </p>
     <code>
-      default-src 'self'; script-src 'self' 'sha256-d/p4wxoEWLKMswgagVF75MaSl2ApQXumNG1tqVILWSU=' 'strict-dynamic' 'unsafe-inline';
+      default-src 'self'; script-src 'self' 'sha256-aPK+M1Ic/YyssLh6WKqbat5IIKD6wwh/hyWW5D53D9k=' 'strict-dynamic' 'unsafe-inline';
     </code>
     <p>Tip: Open DevTools on the Console tab</p>
 
@@ -42,6 +42,7 @@
     <script>
       const el = document.getElementById("inline-script");
       el.innerText = "Ok";
+      el.style.color = "green";
       console.log("inline script is allowed!");
     </script>
     <script src="root-script.js"></script>
