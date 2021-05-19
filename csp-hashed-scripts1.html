@@ -12,9 +12,17 @@
     <script src="root-script.js" integrity="sha256-1OvoPTM3RbAclxZfP8/XGvyyKn6UvACDERsgPUaQqpk="></script>
     <script src="folder/non-root-script.js" integrity="sha256-MCfujWnFLaS7Az0Cm5XMacMYECYism2/7Pxuak2ebLs="></script>
 
-    <script>
-      console.log("inline script is allowed!");
-    </script>
+    <style>
+      form {
+        width: 250px;
+      }
+      .disabled {
+        color: red;
+      }
+      .ok {
+        color: green;
+      }
+    </style>
   </head>
   <body>
     <p>
@@ -29,5 +37,28 @@
     <a href="csp-hashed-scripts.html">CSP with inline script hashes page</a>
     <br />
     <a href="index.html">Simple CSP policy page</a>
+
+    <h2>Demo</h2>
+    <form action="#">
+      <fieldset>
+        <legend>inline script</legend>
+        <span id="inline-script" class="disabled">disabled</span>
+      </fieldset>
+      <fieldset>
+        <legend>/root-script.js</legend>
+        <span id="root-external-script" class="disabled">disabled</span>
+      </fieldset>
+      <fieldset>
+        <legend>/folder/non-root-script.js</legend>
+        <span id="non-root-external-script" class="disabled">disabled</span>
+      </fieldset>
+    </form>
+
+    <script>
+      const el = document.getElementById("inline-script");
+      el.innerText = "Ok";
+      el.className = "ok";
+      console.log("inline script is allowed!");
+    </script>
   </body>
 </html>
