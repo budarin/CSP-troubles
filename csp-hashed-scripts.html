@@ -8,9 +8,6 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSP with inline script hashes (with errors)</title>
-
-    <script src="root-script.js"></script>
-    <script src="folder/non-root-script.js"></script>
   </head>
   <body>
     <p>
@@ -48,5 +45,7 @@
       el.style.color = "green";
       console.log("inline script is allowed!");
     </script>
+    <script src="root-script.js"></script>
+    <script src="folder/non-root-script.js"></script>    
   </body>
 </html>
